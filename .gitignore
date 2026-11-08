@@ -1,0 +1,16 @@
+# 附件 / PDF：版权原因不进仓库
+pdfs/*.pdf
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+
+# Obsidian 本地状态：每个人窗口布局不同，不需要同步
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/app.json.bak
+.trash/
+
+# 第三方插件二进制（只保留插件清单 community-plugins.json，别人按清单自己装）
+.obsidian/plugins/

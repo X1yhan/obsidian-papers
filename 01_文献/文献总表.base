@@ -1,0 +1,46 @@
+filters:
+  and:
+    - file.inFolder("01_文献")
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: 论文
+  year:
+    displayName: 年份
+  venue:
+    displayName: 出处
+  status:
+    displayName: 状态
+  rating:
+    displayName: 评分
+  topics:
+    displayName: 主题
+views:
+  - type: table
+    name: 全部
+    order:
+      - file.name
+      - year
+      - venue
+      - status
+      - rating
+      - topics
+  - type: table
+    name: 待读
+    filters:
+      and:
+        - status == "待读"
+    order:
+      - file.name
+      - year
+      - topics
+  - type: table
+    name: 精读
+    filters:
+      and:
+        - status == "精读"
+    order:
+      - file.name
+      - year
+      - rating
+      - topics
